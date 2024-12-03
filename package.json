@@ -11,16 +11,19 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run"
+		"test": "npm run test:unit -- --run",
+		"gh-pages": "npm run build && npx gh-pages -d build"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.3",
 		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-static": "^3.0.6",
 		"@sveltejs/kit": "^2.9.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"eslint": "^9.7.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
+		"gh-pages": "^6.2.0",
 		"globals": "^15.0.0",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.6",
