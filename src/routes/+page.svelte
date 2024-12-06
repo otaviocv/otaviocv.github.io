@@ -1,6 +1,5 @@
 <div class="app">
   <div class="content">
-      <!-- <p class="topbar">light | dark</p> -->
       <br>
 
     <h1>otaviocv.</h1>
@@ -17,9 +16,9 @@
       </p>
       <p class="right">
         ───────── <br>
-        <span class="bold darkblue"> <a href="https://x.com/otaviocv">twitter</a></span><br>
-        <span> <a>youtube</a></span><br>
-        <span> <a>linkedin</a></span><br>
+        <a class="bold darkblue" href="https://x.com/otaviocv">twitter</a><br>
+        <a href="https://www.youtube.com/@otaviocv">youtube</a><br>
+        <a href="https://www.linkedin.com/in/otaviocv/">linkedin</a><br>
         ─────────
       </p>
     </div>
@@ -86,7 +85,6 @@
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
-  //color: #00ff00;
 }
 
 .app {
@@ -108,10 +106,6 @@ h1 {
   max-width: 750px;
   padding: 24px;
   margin: auto;
-}
-
-.topbar {
-  text-align: right;
 }
 
 .topsection {
