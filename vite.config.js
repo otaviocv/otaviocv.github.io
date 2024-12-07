@@ -2,15 +2,19 @@ import { resolve } from 'path';
 import { defineConfig } from 'vitest/config';
 import { sveltekit } from '@sveltejs/kit/vite';
 
-export default defineConfig({
-	plugins: [sveltekit()],
-	resolve: {
-		alias: {
-			$fonts: resolve('./static/fonts')
-		}
-	},
+export default defineConfig(({mode}) => {
+	return {
+		plugins: [sveltekit()],
 
-	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
-	}
+		resolve: {
+			alias: {
+				$fonts: (mode == "production") ? resolve('./static/fonts') : "/fonts"
+			}
+		},
+
+		test: {
+			include: ['src/**/*.{test,spec}.{js,ts}']
+		} 
+
+	};
 });
