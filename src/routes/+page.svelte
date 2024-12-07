@@ -17,10 +17,11 @@
       <p class="right">
         ───────── <br>
         <a class="bold darkblue" href="https://x.com/otaviocv">twitter</a><br>
-        <a href="https://www.youtube.com/@otaviocv">youtube</a><br>
-        <a href="https://www.linkedin.com/in/otaviocv/">linkedin</a><br>
+        <a class="bold darkred" href="https://www.youtube.com/@otaviocv">youtube</a><br>
+        <a class="bold darkpurple" href="https://www.linkedin.com/in/otaviocv/">linkedin</a><br>
         ─────────
       </p>
+
     </div>
 
     <br>
@@ -71,7 +72,7 @@
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: normal;
-	src: url('$fonts/WOFF2/IosevkaTerm-Regular.woff2') format('woff2'), url('$fonts/TTF/IosevkaTerm-Regular.ttf') format('truetype');
+	src: url('fonts/WOFF2/IosevkaTerm-Regular.woff2') format('woff2'), url('fonts/TTF/IosevkaTerm-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -80,7 +81,7 @@
 	font-weight: 700;
 	font-stretch: normal;
 	font-style: normal;
-	src: url('$fonts/WOFF2/IosevkaTerm-Bold.woff2') format('woff2'), url('$fonts/TTF/IosevkaTerm-Bold.ttf') format('truetype');
+	src: url('fonts/WOFF2/IosevkaTerm-Bold.woff2') format('woff2'), url('fonts/TTF/IosevkaTerm-Bold.ttf') format('truetype');
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -124,6 +125,14 @@ h1 {
 
 .darkblue {
   color: #00A3FF;
+}
+
+.darkred {
+  color: #FF006B;
+}
+
+.darkpurple {
+  color: #CC00FF;
 }
 
 
