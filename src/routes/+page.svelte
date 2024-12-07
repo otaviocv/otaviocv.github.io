@@ -71,7 +71,7 @@
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: normal;
-	src: url('fonts/WOFF2/IosevkaTerm-Regular.woff2') format('woff2'), url('fonts/TTF/IosevkaTerm-Regular.ttf') format('truetype');
+	src: url('$fonts/WOFF2/IosevkaTerm-Regular.woff2') format('woff2'), url('$fonts/TTF/IosevkaTerm-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -80,7 +80,7 @@
 	font-weight: 700;
 	font-stretch: normal;
 	font-style: normal;
-	src: url('fonts/WOFF2/IosevkaTerm-Bold.woff2') format('woff2'), url('fonts/TTF/IosevkaTerm-Bold.ttf') format('truetype');
+	src: url('$fonts/WOFF2/IosevkaTerm-Bold.woff2') format('woff2'), url('$fonts/TTF/IosevkaTerm-Bold.ttf') format('truetype');
 }
 
 a:link, a:visited, a:hover, a:active {
