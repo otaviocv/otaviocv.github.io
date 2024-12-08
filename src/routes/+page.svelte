@@ -1,4 +1,8 @@
+<script>
+</script>
+
 <div class="app">
+
   <div class="content">
       <br>
 
@@ -16,9 +20,9 @@
       </p>
       <p class="right">
         ───────── <br>
-        <a class="bold darkblue" href="https://x.com/otaviocv">twitter</a><br>
-        <a class="bold darkred" href="https://www.youtube.com/@otaviocv">youtube</a><br>
-        <a class="bold darkpurple" href="https://www.linkedin.com/in/otaviocv/">linkedin</a><br>
+        <a class="bold blue" href="https://x.com/otaviocv">twitter</a><br>
+        <a class="bold pink" href="https://www.youtube.com/@otaviocv">youtube</a><br>
+        <a class="bold purple" href="https://www.linkedin.com/in/otaviocv/">linkedin</a><br>
         ─────────
       </p>
 
@@ -93,8 +97,8 @@ a:link, a:visited, a:hover, a:active {
   font-size: 2em;
   width: 100%;
   display: content;
-  background: #000;
-  color: #00ff00;
+  background: var(--theme-backgroung-color);
+  color: var(--theme-text-color);
 }
 
 h1 {
@@ -123,16 +127,16 @@ h1 {
 	font-weight: 700;
 }
 
-.darkblue {
-  color: #00A3FF;
+.blue {
+  color: var(--theme-blue);
 }
 
-.darkred {
-  color: #FF006B;
+.pink {
+  color: var(--theme-pink);
 }
 
-.darkpurple {
-  color: #CC00FF;
+.purple {
+  color: var(--theme-purple);
 }
 
 

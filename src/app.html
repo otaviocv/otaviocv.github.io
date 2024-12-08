@@ -8,9 +8,52 @@
 			* {
 				margin: 0px;
 			}
+
+			:root {
+  			/* dark theme config */
+  			--dark-theme-backgroung-color: #000;
+  			--dark-theme-green: #00FF55;
+  			--dark-theme-yellow: #FFB800;
+  			--dark-theme-purple: #CC00FF;
+  			--dark-theme-blue: #00A3FF;
+  			--dark-theme-pink: #FF006B;
+  			--dark-theme-text-color: var(--dark-theme-green);
+
+  			/* light theme config */
+  			--light-theme-backgroung-color: #FFF6DF;
+  			--light-theme-green: #006A24;
+  			--light-theme-yellow: #CA9100;
+  			--light-theme-purple: #A300CC;
+  			--light-theme-blue: #008DDC;
+  			--light-theme-pink: #CF0057;
+  			--light-theme-text-color: var(--light-theme-green);
+
+  			/* default config */
+  			--theme-backgroung-color: var(--dark-theme-backgroung-color);
+  			--theme-green: var(--dark-theme-green);
+  			--theme-yellow: var(--dark-theme-yellow);
+  			--theme-purple: var(--dark-theme-purple);
+  			--theme-blue: var(--dark-theme-blue);
+  			--theme-pink: var(--dark-theme-pink);
+  			--theme-text-color: var(--dark-theme-green);
+			}
+
+			@media (prefers-color-scheme: light) {
+				:root {
+  				--theme-backgroung-color: var(--light-theme-backgroung-color);
+  				--theme-green: var(--light-theme-green);
+  				--theme-yellow: var(--light-theme-yellow);
+  				--theme-purple: var(--light-theme-purple);
+  				--theme-blue: var(--light-theme-blue);
+  				--theme-pink: var(--light-theme-pink);
+  				--theme-text-color: var(--light-theme-green);
+				}
+			}
+
 			body::-webkit-scrollbar {
 				display: none;
 			}
+
 		</style>
 		%sveltekit.head%
 	</head>
