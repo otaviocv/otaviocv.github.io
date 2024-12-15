@@ -2,7 +2,7 @@
     <title>otaviocv</title> 
 </svelte:head>
 
-<div class="app">
+<div class="app app-font-size">
 
   <div class="content">
       <br>
@@ -95,12 +95,21 @@ a:link, a:visited, a:hover, a:active {
 
 .app {
   font-family: Iosevka Term Web, Consolas, Courier, monospace;
-  font-size: 24px;
   width: 100%;
   min-height: 100vh;
   display: content;
   background: var(--theme-backgroung-color);
   color: var(--theme-text-color);
+}
+
+.app-font-size {
+  font-size: 24px;
+}
+
+@media (min-width: 600px) {
+  .app-font-size {
+    font-size: 32px;
+  }
 }
 
 h1 {
