@@ -97,7 +97,7 @@ a:link, a:visited, a:hover, a:active {
   font-family: Iosevka Term Web, Consolas, Courier, monospace;
   font-size: 24px;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: content;
   background: var(--theme-backgroung-color);
   color: var(--theme-text-color);
