@@ -1,5 +1,6 @@
-<script>
-</script>
+<svelte:head>
+    <title>otaviocv</title> 
+</svelte:head>
 
 <div class="app">
 
@@ -94,8 +95,9 @@ a:link, a:visited, a:hover, a:active {
 
 .app {
   font-family: Iosevka Term Web, Consolas, Courier, monospace;
-  font-size: 2em;
+  font-size: 24px;
   width: 100%;
+  height: 100%;
   display: content;
   background: var(--theme-backgroung-color);
   color: var(--theme-text-color);
