@@ -4,7 +4,7 @@ language_name = "Português"
 # (post publication date, tag posts list...).
 # Not used in comments, "date_locale" is used instead.
 # See https://docs.rs/chrono/0.4.31/chrono/format/strftime/index.html
-date_format = "%d/%B/%Y"
+date_format = "%d de %B de %Y"
 date_locale = "pt_BR"
 
 # Menu items.
