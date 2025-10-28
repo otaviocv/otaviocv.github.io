@@ -10,6 +10,7 @@ date_locale = "en_US"
 # Menu items.
 # Should match the names in config.extra.nav.links and config.extra.footer.links.
 Links = "Links"
+About = "About Me"
 Blog = "Blog"
 Demo = "Demo"
 Mods = "Mods"
