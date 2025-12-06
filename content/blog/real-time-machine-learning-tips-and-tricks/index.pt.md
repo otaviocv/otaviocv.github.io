@@ -1,7 +1,7 @@
 +++
-title = "O futuro do aprendizado de máquina"
+title = "Aprendizado de máquina em tempo real: diquinhas e truques para facilitar a vida"
 authors = ["Otávio Vasques"]
-date = 2025-10-27
+date = 2025-12-06
 insert_anchor_links = "heading"
 +++
 
@@ -15,5 +15,3 @@ insert_anchor_links = "heading"
         
 ```
 {% end %}
-
-[_Carrot_](https://ascii.co.uk/art/carrot)
