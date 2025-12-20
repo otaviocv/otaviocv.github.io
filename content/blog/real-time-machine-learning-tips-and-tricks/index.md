@@ -150,7 +150,7 @@ and the model it self. We try to keep its interface as close as possible to a
 "feature vector" or a flat json schema from feature names to feature values.
 Still, there is a wrapper written in clojure that holds "common tasks" that
 all models should have like authentication, propagation of predictions to kafka
-and the ETL. This bundle is joined together in a Kubernets pod applying the
+and the ETL. This bundle is joined together in a Kubernetes pod applying the
 "side car" pattern.
 
 With this design we achieve:
@@ -217,7 +217,7 @@ pontentially break one assumption that we like a lot: "n rows in, n rows out".
 
 This assumption is the assumption that if you send N instances of prediciton
 you must get back N instances with their predictions. In our practices
-it feels odd to send 10 rows in and get only one row back, specilly when this
+it feels odd to send 10 rows in and get only one row back, specially when this
 work must be executed in the adapter because, for optimization purposes, you
 decided to aggregate this in a dataset or a datapipeline outside the model
 pipeline.
@@ -432,6 +432,35 @@ _Let's begin the tips and tricks!_
 ## Cost optimization, or just doing less
 
 ### Remember of unnecessary redundancy
+
+One of the strategies to scale adopted by the company was to apply sharding,
+not just for databases
+([Managing Cloud Limits](https://building.nubank.com/managing-cloud-limits/)) but
+for everything, including services, kafka and models.
+
+The issue with sharding is that although it works very well for scaling databases
+it may introduce unnecessary redundancy for shareable workloads specially 
+statless services like model services. Given that shards are relatively independent
+and that, in order to keep high availability, we required a minimum of 2 independent
+work units (pods in Kubernetes), if we have 20 shards we already starts with a minimum of
+40 working units.
+
+For many usecases even using fractions of resources was already a lot making the
+bottom of costs very high just to start. Besides that, tasks that operates with
+a shard bias would be under utilized in low load shards and under pressure in high
+load shards (there is the possibility to make different resource allocations per
+shard but we took an even better approach). We observed many times models going
+down because of hicups in resource allocation, one pode goes down, the other
+gets overloaded and model down.
+
+The strategy to overcome that was to get rid of sharded model deployment. Take a global
+deployment setting where requests from all shards goes to a single global set of model
+pods. This reduced the minimum, since now we can keep the minimum at a global level,
+and reduced the under utilization buffer since shard bias didn't matter anymore.
+
+This was also good to improve mini batching efficiency since we could keep latency
+relatively the same value but increasing the through put.
+
 ### Filter as much as possible
 
 Just doing less is the best optimization possible. The trick we employ is,
