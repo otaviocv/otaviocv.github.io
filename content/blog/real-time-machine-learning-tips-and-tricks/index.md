@@ -8,16 +8,16 @@ insert_anchor_links = "heading"
 
 {% crt() %}
 ```
-                            .       .
-                                 .  |  .
-                                  \ | /    +
-                          *        \|/
-                              --==> * <==--   '
-                             +     /|\   .
-                                  / | \
-                          .      '  |  '       *
-                                    |
-                              .     '    .
+       .       .
+            .  |  .
+             \ | /    +
+     *        \|/
+         --==> * <==--   '
+        +     /|\   .
+             / | \
+     .      '  |  '       *
+               |
+         .     '    .
 ```
 {% end %}
 
@@ -434,9 +434,104 @@ _Let's begin the tips and tricks!_
 ### Remember of unnecessary redundancy
 ### Filter as much as possible
 
+Just doing less is the best optimization possible. The trick we employ is,
+when possible, to create some kind of rough filter, often called "pre policy"
+to control model eligibility and pontentially save precious units of work.
+
+If a given customer or transaction can be considered "not applicable" from
+other fast acquiring features and in simple logic form we can return a
+preliminary, simpler, result and not waste all the resources required
+to run a model. Otherwise, we proceed to a regular model scoring.
+
+The effect is dramatic. Here are some examples (as of October 2024):
+- The identity fraud model that runs in various events
+  gets reduce from a raw count of events of 2800 events per second to
+  only **20 events per second**.
+- The theft model is designed to work in the same events. With its
+  filter we can reduce to only **200 events per second**.
+
+This technique is not always possible to be applied. Sometimes you
+are trying to identify exactly what you designed your model for and
+if a pre-policy was possible to be done you wouldn't be building the
+model in the first place.
+
+- The credit card transaction model can't use a pre policy.
+- The mule accounts model can't use a pre policy.
+
 ### Optimize your dependencies graph
 
+Dependencies graphs can be the source of countless problems and headaches.
+
+
+This is one typical dependency graph from one of the models that run in my
+company:
+{% crt() %}
+```
+Inputs
+id-1              id-2  id-3   id-4
+─┼─────────────────┼─────┼──────┼───
+ ├─┬───┬──┬──┬─┬─┐ │     ├─┐    │
+ │ ●   ●  │  ● ● ● │     ● ●    ●
+ │ │   │  │  │ │ └─●
+ │ ●   ●  │  │ │
+ │     ├──●  │ ├─┬─┬─┬─┐
+ │     ●     │ ● ● ● ● ●
+ ├─┬─┐ ├─┬─┐ ├─┬─┬─┬─┬─┬─┬─┐
+ ● ● ● ● ● ● ● ● ● ● ● ● ● ●
+```
+{% end %}
+
+In this ascii art we see a representation dependency graph. Each circle
+represents a request to an external service to fetch information required
+to build the final set of features. We start from the top, with imediately
+available information like the `id-1`, `id-2`, `id-3`, `id-4`, and we proceed
+down reaching out for features. The lines represent dependencies, so if a circle
+comes above it must finish before we can execute a circle below.
+In some cases some intermediate information is required before we can reach
+to the information we want. This is typical to cases where you have a secondary
+identifier and you need to get the primary identifier to then query the
+main table for the features. Some times you need two identifiers,
+only the combination of them fully identifies the entity you are looking for,
+to find the desired features.
+
+As you can see, there are 32 requests to external services to fetch
+features. The longest dependency chain has 4 requests in sequence.
+As we you may imagine, if we execute these requests in sequence, and
+each one of them takes 100 milliseconds to complete, we would wait
+a total of 3200 milliseconds to get all features ready. In this
+particular case the model was required to answer in less than 700
+milliseconds.
+
+In order to achieve that, we paralelize all the requests with
+native clojure async features, future and delays. This way the total
+time to retrieve all features gets bounded by the longest chain, 400
+milliseconds in this case, leaving 300 milliseconds for the additional
+model request and the logic that turns model predictions into actions.
+
+
 #### Keep your controllers simple
+
+But building this type of controller gets complicated really fast and your logic start to
+get completely filled with deref operators and keeping track of errors in deep chains of
+dependencies becomes a hard task. Also, sometimes you need to transform previously
+fetched information into a new representation in order to call the next service, which
+interperse you controller with impure side effects pure logic computations, making really
+hard to test the full behavior and map all corner cases.
+
+Recently, the company open sourced [nodely](https://github.com/nubank/nodely), a tool
+built exactly to tackle these complex graphs and assist separating effectful
+computations from pure logic, providing a simpler mental model and better interception
+points for testing. It topologically sorts the graph and optimally executes it for you.
+Maintaining nodely graphs is still hard, as it is to build and represent the entire
+computational graph, but much simpler than hand crafting them from vanilla clojure
+(future and delay), or `core.async` building blocks. One of the nice features of nodely
+is that it supports many backends and styles of actually exectuing the graph.
+
+If you are also building complex feature or dependency graphs consider taking a look at
+it, not just for the library itself but it also presents a comparison with similar work
+and the differences between them.
+
+
 #### Use as much as possible asynchronous techniques
 #### Keep tight control of timeouts
 #### Use something clever to do the hard work for you
