@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt">
+    <title>otaviocv</title>
+    <subtitle>Website pessoal do otaviocv</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://otaviocv.github.io/pt/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://otaviocv.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-12-06T00:00:00+00:00</updated>
+    <id>https://otaviocv.github.io/pt/atom.xml</id>
+    <entry xml:lang="pt">
+        <title>Aprendizado de máquina em tempo real: diquinhas e truques para facilitar a vida</title>
+        <published>2025-12-06T00:00:00+00:00</published>
+        <updated>2025-12-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Otávio Vasques
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://otaviocv.github.io/pt/blog/real-time-machine-learning-tips-and-tricks/"/>
+        <id>https://otaviocv.github.io/pt/blog/real-time-machine-learning-tips-and-tricks/</id>
+        
+        <content type="html" xml:base="https://otaviocv.github.io/pt/blog/real-time-machine-learning-tips-and-tricks/">&lt;div class=&quot;crt scanlines&quot; aria-hidden=&quot;true&quot;&gt;
+	&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;       .       .
+&lt;&#x2F;span&gt;&lt;span&gt;            .  |  .
+&lt;&#x2F;span&gt;&lt;span&gt;             \ | &#x2F;    +
+&lt;&#x2F;span&gt;&lt;span&gt;     *        \|&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;         --==&amp;gt; * &amp;lt;==--   &amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;        +     &#x2F;|\   .
+&lt;&#x2F;span&gt;&lt;span&gt;             &#x2F; | \
+&lt;&#x2F;span&gt;&lt;span&gt;     .      &amp;#39;  |  &amp;#39;       *
+&lt;&#x2F;span&gt;&lt;span&gt;               |
+&lt;&#x2F;span&gt;&lt;span&gt;         .     &amp;#39;    .
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="pt">
+        <title>O futuro do aprendizado de máquina</title>
+        <published>2025-10-27T00:00:00+00:00</published>
+        <updated>2025-10-27T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Otávio Vasques
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://otaviocv.github.io/pt/blog/on-the-future-of-machine-learning/"/>
+        <id>https://otaviocv.github.io/pt/blog/on-the-future-of-machine-learning/</id>
+        
+        <content type="html" xml:base="https://otaviocv.github.io/pt/blog/on-the-future-of-machine-learning/">&lt;div class=&quot;crt scanlines&quot; aria-hidden=&quot;true&quot;&gt;
+	&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      `-._\ &#x2F;     `~~&amp;quot;--.,_
+&lt;&#x2F;span&gt;&lt;span&gt;     ------&amp;gt;|              `~~&amp;quot;--.,_
+&lt;&#x2F;span&gt;&lt;span&gt; jgs  _.-&amp;#39;&#x2F; &amp;#39;.____,,,,----&amp;quot;&amp;quot;&amp;quot;~~```&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ascii.co.uk&#x2F;art&#x2F;carrot&quot;&gt;&lt;em&gt;Carrot&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="pt">
+        <title>O desafio de ser visto</title>
+        <published>2025-10-21T00:00:00+00:00</published>
+        <updated>2025-10-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Otávio Vasques
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://otaviocv.github.io/pt/blog/releasing-the-blog/"/>
+        <id>https://otaviocv.github.io/pt/blog/releasing-the-blog/</id>
+        
+        <content type="html" xml:base="https://otaviocv.github.io/pt/blog/releasing-the-blog/">&lt;div class=&quot;crt scanlines&quot; aria-hidden=&quot;true&quot;&gt;
+	&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;                    _(_)_                          wWWWw   _  
+&lt;&#x2F;span&gt;&lt;span&gt;        @@@@       (_)@(_)   vVVVv     _     @@@@  (___) _(_)_
+&lt;&#x2F;span&gt;&lt;span&gt;       @@()@@ wWWWw  (_)\    (___)   _(_)_  @@()@@   Y  (_)@(_)
+&lt;&#x2F;span&gt;&lt;span&gt;        @@@@  (___)     `|&#x2F;    Y    (_)@(_)  @@@@   \|&#x2F;   (_)\
+&lt;&#x2F;span&gt;&lt;span&gt;         &#x2F;      Y       \|    \|&#x2F;    &#x2F;(_)    \|      |&#x2F;      |
+&lt;&#x2F;span&gt;&lt;span&gt;      \ |     \ |&#x2F;       | &#x2F; \ | &#x2F;  \|&#x2F;       |&#x2F;    \|      \|&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;      \\|&#x2F;&#x2F;   \\|&#x2F;&#x2F;&#x2F;  \\\|&#x2F;&#x2F;\\\|&#x2F;&#x2F;&#x2F; \|&#x2F;&#x2F;&#x2F;  \\\|&#x2F;&#x2F;  \\|&#x2F;&#x2F;  \\\|&#x2F;&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Faz muito tempo que eu tenho pensado em construir um website, um blog, uma forma de presença digital
+que esteja fora de redes sociais ou da internet fechada. Desde o lançamento do &lt;em&gt;GitHub Pages&lt;&#x2F;em&gt;
+esse desejo existe e desde desse dia eu me envolvi no desenvolvimento de diversos protótipos
+de &lt;em&gt;websites&lt;&#x2F;em&gt; com inúmeros frameworks diferentes: jekyll, hugo, react e svelte, usando Vercel, Netlify...
+e agora Zola. Não consigo me lembrar de quantas vezes eu apaguei e recriei meu repositório do &lt;code&gt;otaviocv.github.io&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Muitas dessas tentativas não chegaram a vida por diversos motivos, eu não gostava dos temas, queria suporte
+multi linguagem, katex, não ter o que falar ou só ter vergonha de se expor publicamente. Após muita
+reflexão interna, notar que novos frameworks possibilitam um website muito mais simples e prático e desapegar
+de um desejo estético ideal esse website sai ao mundo.&lt;&#x2F;p&gt;
+&lt;p&gt;Ele é construído com &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; e o tema &lt;a href=&quot;https:&#x2F;&#x2F;duckquill.daudix.one&#x2F;&quot;&gt;Duckquill&lt;&#x2F;a&gt;,
+possui uma estética minimamente interessante, suporte a vários idiomas e comentários usando Mastodon.
+Um dos motivos desse post introdutório é para testar essa integração.&lt;&#x2F;p&gt;
+&lt;p&gt;Hoje, a minha necessidade de ter um espaço para falar é maior do que nunca e espero poder dizer coisas
+que importam para outras pessoas. Os tempos modernos exigem, também, uma constante vitrine e marca pessoal,
+uma estética profissional, que emula a forma de se produzir conteúdo das redes sociais. Esse website
+pretende ser todas essas coisas além de um grande índice das coisas que eu tenho feito.&lt;&#x2F;p&gt;
+&lt;p&gt;Sem o uso de inteligência artifical, espero que aqui seja um espaço de autenticidade, aprendizado e discussão.
+Nos vemos por ai!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;loveascii.com&#x2F;flowershtm.html&quot;&gt;&lt;em&gt;Flores&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
